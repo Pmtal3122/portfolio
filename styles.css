@@ -1,3 +1,23 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: fixed;
+  z-index: -1;
+}
+
+.sec {
+  border: 1px solid red;
+  min-height: 100vh;
+}
+
+.bufferBlock {
+  height: 80px;
+}

@@ -1,0 +1,18 @@
+Portfolio Structure
+
+Landing Section
+
+|
+V
+
+Work Experience
+
+|
+V
+
+Projects <-> Individual Project
+
+|
+V
+
+Skills

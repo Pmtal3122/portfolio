@@ -22,8 +22,17 @@
 </head>
 
 <body>
-    Wow!!
     <div class="container"></div>
+
+    <div class="sec" id="landing">Landing</div>
+    <div class="bufferBlock"></div>
+    <div class="sec" id="workEx">Work Exp</div>
+    <div class="bufferBlock"></div>
+    <div class="sec" id="projects">Projects</div>
+    <div class="bufferBlock"></div>
+    <div class="sec" id="skills">Skills</div>
+    <div class="bufferBlock"></div>
+    <div class="sec" id="contact">Contact</div>
 
     <script src="./index.js"></script>
     <script type="module">
@@ -36,6 +45,7 @@
         });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setClearColor(0xffffff, 1.0);
         document.querySelector('.container').appendChild(renderer.domElement);
 
         const loader = new GLTFLoader();
@@ -68,7 +78,7 @@
             cube.rotation.y += 0.01;
             renderer.render(scene, camera);
         }
-        //animate();
+        animate();
     </script>
 </body>
 
