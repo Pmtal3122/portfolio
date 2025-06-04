@@ -2,6 +2,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
+import getTimeline from './utils/timeline.js';
+
 // Initialize Lenis
 const lenis = new Lenis({
     autoRaf: true,
@@ -12,7 +14,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setClearColor(0xffffff, 1.0);
+renderer.setClearColor(0x05050f, 1.0);
 document.querySelector('.container').appendChild(renderer.domElement);
 
 const loader = new GLTFLoader();
@@ -38,7 +40,7 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
-camera.position.z = 5;
+camera.position.z = 500;
 function animate() {
     requestAnimationFrame(animate);
     cube.rotation.x += 0.01;
@@ -48,3 +50,4 @@ function animate() {
 animate();
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+getTimeline(camera);
