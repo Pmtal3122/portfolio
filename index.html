@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is a portfolio website for Piyush Talegaonkar, an engineering graduate from Pune Institute of Computer Technology (PICT) and a full stack developer.">
     <link rel="canonical" href="https://pmtal3122.github.io/portfolio">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <title>Piyush Talegaonkar</title>
 
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script type="importmap">
         {
@@ -35,9 +39,53 @@
     <div class="bufferBlock"></div>
     <div class="sec" id="skills">Skills</div>
     <div class="bufferBlock"></div>
-    <div class="sec" id="contact">Contact</div>
+    <div class="sec" id="contact">
+        <div class="contactContainer">
+            <h1>Contact Me</h1>
+            <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="number" placeholder="Your number" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" onclick="(e) => submitForm(e)">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <script type="module" src="./index.js"></script>
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const form = document.getElementById('contactForm');
+            const name = form.name.value;
+            const number = form.number.value;
+            const email = form.email.value;
+            const message = form.message.value;
+            fetch('http://127.0.0.1:8080/sendMail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    number: number,
+                    email: email,
+                    message: message
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            })
+        }
+        document.getElementById('contactForm').addEventListener('submit', submitForm);
+    </script>
 </body>
 
 </html>

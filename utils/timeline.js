@@ -1,5 +1,4 @@
 const getTimeline = (camera) => {
-    console.log("Inside funtion");
     const tl = gsap.timeline();
     tl.to(camera.position, {
         x: 0,
