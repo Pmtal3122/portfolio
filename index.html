@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a portfolio website for Piyush Talegaonkar, an engineering graduate from Pune Institute of Computer Technology (PICT) and a full stack developer.">
+    <meta name="description"
+        content="This is a portfolio website for Piyush Talegaonkar, an engineering graduate from Pune Institute of Computer Technology (PICT) and a full stack developer.">
     <link rel="canonical" href="https://pmtal3122.github.io/portfolio">
     <title>Piyush Talegaonkar</title>
 
@@ -55,6 +56,18 @@
 
     <script type="module" src="./index.js"></script>
     <script>
+
+        // On load, ping the server
+        fetch('https://send-mail-portfolio.onrender.com/ping')
+            .then(response => {
+                if (response.ok) {
+                    console.log('Server is up and running');
+                } else {
+                    console.error('Failed to ping server');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+
         function submitForm(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -75,14 +88,14 @@
                     message: message
                 })
             })
-            .then(response => {
-                if (response.ok) {
-                    alert('Message sent successfully!');
-                    form.reset();
-                } else {
-                    alert('Failed to send message. Please try again later.');
-                }
-            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Message sent successfully!');
+                        form.reset();
+                    } else {
+                        alert('Failed to send message. Please try again later.');
+                    }
+                })
         }
         document.getElementById('contactForm').addEventListener('submit', submitForm);
     </script>
