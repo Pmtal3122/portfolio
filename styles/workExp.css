@@ -1,0 +1,31 @@
+#workEx {
+    /* min-height: min-content; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 24px;
+    padding: 80px 0;
+}
+
+.workExBlock {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    /* border: 1px solid #ccc; */
+    align-items: flex-start;
+}
+
+.workExRight {
+    align-items: flex-end;
+}
+
+.workExOuterContainer {
+    /* border: 1px solid blue; */
+    width: 45%;
+}
+
+.workExpLinks {
+    text-decoration: none;
+    color: #4a90e2;
+}

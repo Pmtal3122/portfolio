@@ -1,0 +1,25 @@
+[
+    {
+        "company": "PGT Consultants",
+        "position": "Software Engineer (Freelance)",
+        "startDate": "08/2024",
+        "endDate": "04/2025",
+        "responsibilities": [
+            "Spearheading the end-to-end design and development of the Organization Website using <strong>MERN</strong> stack.",
+            "Designed frontend using three js and blender, ensuring upto <strong>80%</strong> page load speed as compared to 2d design.",
+            "Automated 7 different mail generation processes using <strong>nodemailer</strong> and <strong>OAuth2</strong>, deployed as a cron job.",
+            "Link to the website: <a class='workExpLinks' href='https://pgtconsultants.in' target='_blank'>PGT Consultants</a>"
+        ]
+    },
+    {
+        "company": "Shri Sadguru Vishwanath Maharaj Rukadikar Trust",
+        "position": "Full Stack Developer Intern",
+        "startDate": "03/2023",
+        "endDate": "04/2023",
+        "responsibilities": [
+            "Led the front-end development team in a two-month project to revamp the organization’s website using the MERN Stack; improved page load speed by 40% and increased user engagement by 25%.",
+            "Coordinated with the back-end team and integrated more than 15 core functional APIs using <strong>Axios API</strong>.",
+            "Overhauled <strong>60%</strong> of all web pages into <strong>responsive</strong> and <strong>SEO-friendly</strong> designs using <strong>Tailwind CSS</strong>."
+        ]
+    }
+]

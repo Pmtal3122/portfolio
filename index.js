@@ -3,6 +3,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 import getTimeline from './utils/timeline.js';
+import getWorkExp from './utils/getWorkEx.js';
 
 // Initialize Lenis
 const lenis = new Lenis({
@@ -51,3 +52,4 @@ animate();
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 getTimeline(camera);
+getWorkExp(); // Load work experience data
