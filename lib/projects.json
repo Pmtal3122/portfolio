@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Conversational Recommendation System",
+        "keywords": ["Conversational AI", "Recommendation System", "NLP", "Sentimental Analysis"],
+        "startDate": "08/2023",
+        "endDate": "03/2024",
+        "details": [
+            "Modelled an automated prototype which provides real-time recommendations on E-Commerce products on the basis of conversational data of users.",
+            "Architected a sentimentally aware recommendation model in <strong>python</strong> using <strong>glove-wiki-gigaword-50</strong> word vector package, that calculates recommendations as fast as <strong>5 seconds</strong> and has an accuracy <strong>greater than 80%</strong>.",
+            "Implemented a template E-Commerce website in <strong>React JS</strong> which displays 15 product categories, and allows users to get <strong>best 3</strong> product recommendations, with additional personalization on the client-side.",
+            "Authored and presented research paper titled ”Conversational Recommendation System using NLP and Sentiment Analysis” at ISETE conference.",
+            "<strong>Link to the project:</strong> <a class='projectsLinks' href='https://github.com/Pmtal3122/cvrBEProject' target='_blank'>Model</a> <a class='projectsLinks' href='https://github.com/Pmtal3122/cvr-website' target='_blank'>Client</a> <a class='projectsLinks' href='https://pmtal3122.github.io/cvr-website/' target='_blank'>Website</a> <a class='projectsLinks' href='https://ijacen.iraj.in/paper_detail.php?paper_id=20944&name=Conversational_Recommendation_System_Using_NLP_and_Sentiment_Analysis' target='_blank'>Research</a>"
+        ]
+    },
+    {
+        "name": "Screenplay App",
+        "keywords": ["MERN", "Software Developemt", "Interdisciplinary"],
+        "startDate": "06/2023",
+        "endDate": "09/2023",
+        "details": [
+            "Developed a comprehensive portal, used by <strong>20+</strong> aspiring and professional screenplay writers.",
+            "Included detailed theoretical concepts and tricks, used in <strong>more than 100</strong> award-winning screenplays.",
+            "Customized an industry-standard, <strong>100%</strong> accurately formatted script editor, by programming advanced DOM Manipulation using Javascript.",
+            "<strong>Link to the project:</strong> <a class='projectsLinks' href='https://github.com/Pmtal3122/ScreenplayApp/tree/master' target='_blank'>Screenplay App</a>"
+        ]
+    },
+    {
+        "name": "Grapple VR",
+        "keywords": ["Unity", "VR", "Game Development", "Interdisciplinary"],
+        "startDate": "03/2023",
+        "endDate": "03/2023",
+        "details": [
+            "Envisioned and created an interactive platformer VR game as a part of a <strong>2 day sprint</strong>.",
+            "Led a team of 5 and implemented a <strong>customized grappling feature</strong>, developed using <strong>C#</strong> scripts."
+        ]
+    }
+]
