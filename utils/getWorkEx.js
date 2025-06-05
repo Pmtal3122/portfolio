@@ -2,7 +2,7 @@
 // import workExp from '../lib/workExp.json';
 function getWorkExp() {
 
-    fetch('../lib/workExp.json')
+    fetch('/lib/workExp.json')
         .then(async (response) => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
