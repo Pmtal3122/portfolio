@@ -5,6 +5,7 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import getTimeline from './utils/timeline.js';
 import getWorkExp from './utils/getWorkEx.js';
 import getProjects from './utils/getProjects.js';
+import getSkills from './utils/getSkills.js';
 
 // Initialize Lenis
 const lenis = new Lenis({
@@ -16,7 +17,7 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setClearColor(0x05050f, 1.0);
+renderer.setClearColor(0x050510, 1.0);
 document.querySelector('.container').appendChild(renderer.domElement);
 
 const loader = new GLTFLoader();
@@ -39,7 +40,7 @@ const loadModel = async (loader, filePath) => {
 };
 
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const material = new THREE.MeshBasicMaterial({ color: 0x000077, wireframe: true });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 camera.position.z = 500;
@@ -55,3 +56,4 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 getTimeline(camera);
 getWorkExp(); // Load work experience data
 getProjects(); // Load projects data
+getSkills(); // Load skills data

@@ -1,7 +1,17 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .projectBlock {
     border: 1px solid #ccc;
     padding: 24px 10%;
     margin: 24px 20%;
     border-radius: 48px;
     backdrop-filter: blur(10px) brightness(0.4);
+}
+
+#projects .projectBlock:first-of-type {
+    margin-top: 80px;
 }
