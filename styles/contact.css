@@ -18,13 +18,17 @@
     width: 100%;
     max-width: 600px;
     row-gap: 24px;
-    box-shadow: 0 0 12px blue;
+    border: 2px solid blue;
     border-radius: 12px;
     backdrop-filter: blur(4px) brightness(0.8);
     /* backdrop-filter: brightness(0.5); */
     /* background-color: rgba(240, 248, 255, 0.05); */
     margin: 40px 0 60px 0px;
     padding: 48px 24px;
+}
+
+#contactForm:hover {
+    box-shadow: 0 0 12px blue;
 }
 
 #contactForm input, #contactForm textarea {
@@ -42,7 +46,7 @@
 }
 
 #contactForm textarea {
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 2px;
     resize: none;
     margin-top: 12px;
@@ -68,14 +72,15 @@
     margin: 0 24px;
     border-radius: 24px;
     background-color: transparent;
-    color: blue;
-    font-weight: bold;
-    border: 2px solid blue;
+    color: white;
+    /* font-weight: bold; */
+    border: 2px solid white;
     cursor: pointer;
     transition: 0.125s;
 }
 
 .submitButton:hover, .loading{
+    border-color: blue;
     background-color: blue;
     color: #fff;
     box-shadow: 0 0 8px blue;
