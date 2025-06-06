@@ -6,6 +6,7 @@ import getTimeline from './utils/timeline.js';
 import getWorkExp from './utils/getWorkEx.js';
 import getProjects from './utils/getProjects.js';
 import getSkills from './utils/getSkills.js';
+import getStarfield from './utils/getStarField.js';
 
 // Initialize Lenis
 const lenis = new Lenis({
@@ -18,6 +19,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setClearColor(0x050510, 1.0);
+// renderer.setClearColor(0xffffff, 1.0);
 document.querySelector('.container').appendChild(renderer.domElement);
 
 const loader = new GLTFLoader();
@@ -38,6 +40,13 @@ const loadModel = async (loader, filePath) => {
         );
     });
 };
+
+const stars = getStarfield({numStars: 5000});
+scene.add(stars);
+
+const sunLight = new THREE.DirectionalLight(0xffffff);
+sunLight.position.set(-2, 0.5, 2)
+scene.add(sunLight);
 
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x000077, wireframe: true });
