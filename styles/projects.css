@@ -5,11 +5,17 @@
 }
 
 .projectBlock {
-    border: 1px solid #ccc;
+    border: 2px solid blue;
     padding: 24px 10%;
-    margin: 24px 20%;
+    margin: 24px 25%;
     border-radius: 48px;
-    backdrop-filter: blur(10px) brightness(0.4);
+    backdrop-filter: blur(2px) brightness(0.9);
+    transition: 0.125s;
+}
+
+.projectBlock:hover {
+    box-shadow: 0 0 12px blue;
+    backdrop-filter: blur(4px) brightness(0.8);
 }
 
 #projects .projectBlock:first-of-type {

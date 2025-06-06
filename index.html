@@ -79,6 +79,8 @@
     <script type="module" src="./index.js"></script>
     <script src="./utils/getWorkEx.js"></script>
     <script>
+        window.history.scrollRestoration = 'manual'; // Disable browser scroll restore
+        window.scrollTo(0, 0); // Ensures scroll is at the top on load
 
         // On load, ping the server
         fetch('https://send-mail-portfolio.onrender.com/ping')
@@ -95,7 +97,7 @@
             e.preventDefault();
             e.stopPropagation();
             const button = document.querySelector('#formButton button');
-            if( button.classList.contains("loading")) {
+            if (button.classList.contains("loading")) {
                 return; // Prevent multiple submissions
             }
             button.classList.add("loading");

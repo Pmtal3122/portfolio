@@ -22,7 +22,17 @@
 
 .workExOuterContainer {
     /* border: 1px solid blue; */
-    width: 45%;
+    width: 40%;
+    border: 2px solid blue;
+    padding: 24px 36px;
+    border-radius: 36px;
+    backdrop-filter: blur(2px) brightness(0.9);
+    transition: 0.125s;
+}
+
+.workExOuterContainer:hover {
+    box-shadow: 0 0 12px blue;
+    backdrop-filter: blur(4px) brightness(0.8);
 }
 
 .workExpLinks {
