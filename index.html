@@ -70,7 +70,7 @@
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <div id="formButton">
-                    <button type="submit" onclick="(e) => submitForm(e)">Send Message</button>
+                    <button class="submitButton" type="submit" onclick="(e) => submitForm(e)">Send Message</button>
                 </div>
             </form>
         </div>
@@ -94,6 +94,12 @@
         function submitForm(e) {
             e.preventDefault();
             e.stopPropagation();
+            const button = document.querySelector('#formButton button');
+            if( button.classList.contains("loading")) {
+                return; // Prevent multiple submissions
+            }
+            button.classList.add("loading");
+            button.innerHTML = "Sending...";
             const form = document.getElementById('contactForm');
             const name = form.name.value;
             const number = form.number.value;
@@ -114,6 +120,8 @@
                 .then(response => {
                     if (response.ok) {
                         alert('Message sent successfully!');
+                        button.classList.remove("loading");
+                        button.innerHTML = "Send Message";
                         form.reset();
                     } else {
                         alert('Failed to send message. Please try again later.');
