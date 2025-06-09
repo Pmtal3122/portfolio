@@ -87,3 +87,18 @@
     /* transform: scaleX(1.05); */
     padding: 12px 24px;
 }
+
+@media screen and (max-width: 768px) {
+    #contactForm {
+        width: 90%;
+        padding: 24px 12px;
+    }
+
+    #contactForm input, #contactForm textarea {
+        margin: 0 12px;
+    }
+
+    #formButton {
+        justify-content: center;
+    }
+}

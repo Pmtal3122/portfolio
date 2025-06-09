@@ -37,3 +37,15 @@
     padding: 12px 28px;
     box-shadow: 0 0 8px white;
 }
+
+@media screen and (max-width: 768px) {
+    .skillsContainer {
+        width: 90%;
+        user-select: none;
+    }
+
+    .skillBlock {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

@@ -39,3 +39,19 @@
     text-decoration: none;
     color: #4a90e2;
 }
+
+@media screen and (max-width: 768px) {
+    #workEx {
+        padding: 40px 0;
+    }
+
+    .workExBlock {
+        width: 90%;
+    }
+
+    .workExOuterContainer {
+        width: 90%;
+        padding: 24px 12px;
+    }
+    
+}
