@@ -51,7 +51,7 @@ scene.add(sunLight);
 const init = async () => {
     const model = await loadModel(loader, 'https://pmtal3122.github.io/portfolio/Models/landing.glb');
     scene.add(model);
-    getTimeline(camera);
+    getTimeline(camera, model);
     animate();
 }
 init();
