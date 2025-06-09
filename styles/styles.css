@@ -23,3 +23,137 @@ body {
 .bufferBlock {
   height: 80px;
 }
+
+#landing {
+  display: grid;
+  grid-template-rows: 25% 75%;
+}
+
+#landingBottom {
+  /* height: 60%; */
+  display: flex;
+  /* backdrop-filter: blur(2px) brightness(0.9); */
+}
+
+#landingLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 0.3;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+#landingRight {
+  flex: 0.7;
+  /* border: 1px solid red; */
+}
+
+#imageDiv {
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+
+#image {
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  transition: 0.125s;
+}
+
+/* #image:hover {
+  box-shadow: 0 0 12px blue;
+  border: 4px solid blue;
+} */
+
+#externalLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+}
+
+.externalLinkButton {
+  outline: none;
+  border: 2px solid #eee;
+  backdrop-filter: blur(2px) brightness(0.9);
+  background-color: transparent;
+  color: #ccc;
+  padding: 12px 24px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* display: block; */
+  border-radius: 32px;
+  transition: 0.125s;
+  text-decoration: none;
+}
+
+.externalLinkButton:hover {
+  box-shadow: 0 0 12px blue;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+  border: 2px solid blue;
+}
+
+.externalLinkSvg {
+  margin: 0 16px 0 24px;
+}
+
+#landingRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#landingRightContainer {
+  margin: 0 12%;
+}
+
+#landingRightContainer h3 {
+  margin: 0 0 60px 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.landingRightKeyword {
+  background-color: #333;
+  padding: 8px 16px;
+  border-radius: 32px;
+  margin: 0 4px;
+  user-select: none;
+}
+
+#landingRightDescription {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+#landingRightDescription:last-of-type {
+  margin-bottom: 48px;
+}
+
+#contactButton {
+  outline: none;
+  border: 2px solid #eee;
+  backdrop-filter: blur(2px) brightness(0.9);
+  background-color: #eee;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 24px;
+  width: 240px;
+  border-radius: 24px;
+  transition: 0.125s;
+}
+
+#contactButton:hover {
+  box-shadow: 0 0 12px blue;
+  color: blue;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid blue;
+}

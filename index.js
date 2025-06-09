@@ -48,10 +48,18 @@ const sunLight = new THREE.DirectionalLight(0xffffff);
 sunLight.position.set(-2, 0.5, 2)
 scene.add(sunLight);
 
+const init = async () => {
+    const model = await loadModel(loader, 'https://pmtal3122.github.io/portfolio/Models/landing.glb');
+    scene.add(model);
+    getTimeline(camera);
+    animate();
+}
+init();
+
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x000077, wireframe: true });
 const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+// scene.add(cube);
 camera.position.z = 500;
 function animate() {
     requestAnimationFrame(animate);
@@ -59,10 +67,8 @@ function animate() {
     cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
-animate();
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-getTimeline(camera);
 getWorkExp(); // Load work experience data
 getProjects(); // Load projects data
 getSkills(); // Load skills data
