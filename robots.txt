@@ -1,0 +1,6 @@
+# Allow all crawlers full access to the site
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://pmtal3122.github.io/portfolio/sitemap.xml
