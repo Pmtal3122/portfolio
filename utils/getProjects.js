@@ -12,11 +12,11 @@ function getProjects() {
                 projectBlock.className = 'projectBlock';
 
                 projectBlock.innerHTML = `
-                    <h3>${projects[i].name}</h3>
+                    <h3 id='projectsHead'>${projects[i].name}</h3>
                     ${projects[i].keywords.map(keyword => `<i class="keyword">${keyword}</i>`).join(', ')}
-                    <p>${projects[i].startDate} -- ${projects[i].endDate}</p>
+                    <p id='projectsDate'>${projects[i].startDate} to ${projects[i].endDate}</p>
                     <ul>
-                        ${projects[i].details.map(desc => `<li>${desc}</li>`).join('')}
+                        ${projects[i].details.map(desc => `<li id='projectsListItem'>${desc}</li>`).join('')}
                     </ul>
                 `;
                 projectsDiv.appendChild(projectBlock);

@@ -21,3 +21,29 @@
 #projects .projectBlock:first-of-type {
     margin-top: 80px;
 }
+
+#projectsHead {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#projectsDate {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+#projectsListItem {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.projectsLinks {
+    text-decoration: none;
+    color: #4a90e2;
+}
