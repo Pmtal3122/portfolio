@@ -24,11 +24,11 @@ function getWorkExp() {
 
                 if(i%2==1) tempBlock.classList.add('workExRight');
                 workExInnerContainer.innerHTML = `
-        <h3>${workExp[i].position}</h3>
-        <p>${workExp[i].company}</p>
-        <p>${workExp[i].startDate} to ${workExp[i].endDate}</p>
+        <h3 id='workExHeader'>${workExp[i].position}</h3>
+        <p id='workExCompany'>${workExp[i].company}</p>
+        <p id='workExDate'>${workExp[i].startDate} to ${workExp[i].endDate}</p>
         <ul>
-            ${workExp[i].responsibilities.map(res => `<li>${res}</li>`).join('')}
+            ${workExp[i].responsibilities.map(res => `<li id='workExListItem'>${res}</li>`).join('')}
         </ul>
     `;
                 workExDiv.appendChild(tempBlock);
